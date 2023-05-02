@@ -1,0 +1,11 @@
+,,acc,acc
+dataname,,CIFAR10,CIFAR100
+model,setting,,
+DenseNet121,finetune_set,0.8893,0.6321
+DenseNet121,pretrained_set,0.8859,0.6396
+DenseNet161,finetune_set,0.908,0.684
+DenseNet161,pretrained_set,0.9087,0.6779
+ResNet18,finetune_set,0.8841,0.6154
+ResNet18,pretrained_set,0.8779,0.6081
+ResNet50,finetune_set,0.8947,0.6693
+ResNet50,pretrained_set,0.893,0.6729
