@@ -1,0 +1,24 @@
+EXP_NAME: 'densenet161-pretrained_set'
+SEED: 223
+
+MODEL:
+  modelname: densenet161
+  num_classes: 100
+  
+DATASET:
+  datadir: /datasets
+  dataname: CIFAR100
+
+OPTIMIZER:
+  opt_name: Adam
+  lr: 0.001
+
+TRAINING:
+  batch_size: 256
+  test_batch_size: 256
+  epochs: 50
+  log_interval: 10
+  use_scheduler: true
+
+RESULT:
+  savedir: './saved_model'
