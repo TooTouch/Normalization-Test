@@ -3,6 +3,10 @@ Comparison normalization when using a pre-trained model
 
 This experiment aims to determine whether it is better to use the mean and std of the normalization when using pertrained weights for the pretrained dataset or the fine-tuning dataset.
 
+**Motivation**
+
+In general, it is known that normalization is used to fit the data for fine-tuning. This is because the data for fine-tuning is different from the distribution of the data used for pre-training. However, on the other hand, since the weights of the pre-trained model are trained according to the distribution of the pre-training data, I wondered if it would be appropriate to apply the same normalization to the data for fine-tuning as was used in the pre-training data.
+
 # Experiments
 
 **Baseline**
