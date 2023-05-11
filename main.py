@@ -48,10 +48,11 @@ def run(cfg):
 
     # load dataset
     trainset, testset = __import__('datasets').__dict__[f"load_{cfg['DATASET']['dataname'].lower()}"](
-        datadir  = cfg['DATASET']['datadir'], 
-        img_size = cfg['DATASET']['img_size'],
-        mean     = cfg['DATASET']['mean'], 
-        std      = cfg['DATASET']['std']
+        datadir            = cfg['DATASET']['datadir'], 
+        img_size           = cfg['DATASET']['img_size'],
+        mean               = cfg['DATASET'].get('mean', None), 
+        std                = cfg['DATASET'].get('std', None),
+        normalize          = cfg['DATASET']['normalize']
     )
     
     # load dataloader
@@ -88,7 +89,7 @@ if __name__=='__main__':
     parser.add_argument('--default_setting', type=str, default=None, help='exp config file')    
     parser.add_argument('--modelname', type=str, default='resnet18', help='model name')
     parser.add_argument('--dataname', type=str, default='CIFAR10', help='data name')
-    parser.add_argument('--normalize', type=str, default='finetune', choices=['finetune','pretrain'], help='normlization setting')
+    parser.add_argument('--normalize', type=str, default='finetune', choices=['finetune','pretrain','instance','minmax'], help='normlization setting')
 
     args = parser.parse_args()
 

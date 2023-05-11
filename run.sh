@@ -7,5 +7,7 @@ do
     do
         python main.py --default_setting default_configs.yaml --dataname $d --modelname $m --normalize finetune
         python main.py --default_setting default_configs.yaml --dataname $d --modelname $m --normalize pretrain
+        python main.py --default_setting default_configs.yaml --dataname $d --modelname $m --normalize instance
+        python main.py --default_setting default_configs.yaml --dataname $d --modelname $m --normalize minmax
     done
 done
